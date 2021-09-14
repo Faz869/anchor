@@ -9,6 +9,7 @@ mod basic_2 {
 
     pub fn create(ctx: Context<Create>, authority: Pubkey) -> ProgramResult {
         let counter = &mut ctx.accounts.counter;
+        msg!("FAZ");
         counter.authority = authority;
         counter.count = 0;
         Ok(())
